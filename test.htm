@@ -3,22 +3,30 @@
 <body>
   <h1>hello</h1>
 
+  <!--
   Firstname: <input type="text" name="FirstName" id="FirstName"><br>
   Lastname: <input type="text" name="LastName" id="LastName"><br>
   Roster: <input type="text" name="Roster" id="Roster"><br>
   teamName: <input type="text" name="teamName" id="teamName"><br>
 
-  <button onclick="document.getElementById('demo').innerHTML = makeCoach(document.getElementById('FirstName').value,document.getElementById('LastName').value, document.getElementById('Roster').value,document.getElementById('teamName').value)">Add</button>
+  <button onclick="makeCoach(document.getElementById('FirstName').value,document.getElementById('LastName').value, document.getElementById('Roster').value,document.getElementById('teamName').value)">Add</button>
 
+  -->
+
+  Question Answer: <input type="text" name="Question Answer" id=" a_question_answer"><br>
+  Question Response: <input type="text" name="Question Response" id="a_question_response"><br>
 
   <button type="button"
-  onclick="document.getElementById('demo2').innerHTML = makeTeam()">
-  Click me.</button>
+  onclick="solve_question(document.getElementById('a_question_answer').value, document.getElementById('a_question_response').value)", onclick="">
+  Submit.</button>
+
 
   <script src="test.js"></script>
 
   <p id="demo"></p>
   <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
 
 </body>
 </html>

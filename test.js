@@ -11,6 +11,13 @@ var coachArray = {};
 
 var play_array = {};
 
+function Coach(first, last, roster, team, plays) {
+  this.firstName = first;
+  this.lastName = last;
+  this.teamName = team;
+  this.playArray = plays;
+}
+
 
 //array
 var defaultPlays = {};
@@ -20,21 +27,17 @@ function makeTeam()
 {
   var coach = {name:"a " , username:"b " , teamName:"c " , roster:"d " , playerArray:player, questions:"e "};
   var player = {name:"a " , position:"b " , number:0};
-  document.write(coach.username);
+  //document.write(coach.username);
   return coach.name;
 }
 
 function makeCoach(firstName, lastName, roster, teamName)
 {
-  var coach = {name: (firstName + " " + lastName), teamName: teamName};
-  printCoach(coach);
-  return coach;
-}
+  var coach = {name: (firstName + " " + lastName), teamName: teamName, roster: roster};
 
-function printCoach(coach)
-{
-  document.write(coach.name);
-  document.write(coach.teamName);
+  document.getElementById('demo').innerHTML = coach.name;
+  document.getElementById('demo1').innerHTML = coach.roster;
+  document.getElementById('demo2').innerHTML = coach.teamName;
 }
 
 function quiz(position, question_num, questions)
@@ -49,14 +52,19 @@ function quiz(position, question_num, questions)
     }
   }
   percentage = numCorrect/question_num;
-  return percentage;
+  //return percentage;
+  //document.getElementById('demo3').innerHTML = percentage;
 }
 
-function solve_question(a_question)
+function solve_question(a_question_answer, a_question_response)
 {
   var result = false;
+  if (a_question_answer == a_question_response)
+  {
+    result = true;
+  }
 
-  return result;
+  document.getElementById('demo3').innerHTML = result;
 }
 
 function addPlayer(playerArray, new_player)
