@@ -3,6 +3,10 @@ p {
     font-size: 24px;
 }
 
+h1 {
+    color: green;
+}
+
 li {
     color: black;
     font-size: 20px;
