@@ -72,3 +72,46 @@ function add_accordion(reference, position) {
         `;
     reference.insertAdjacentHTML(position, text);
 }
+
+function add_question(reference, position, question) {
+    var text = `<div class="quiz-question">
+    <div class="w3-row-padding quiz">
+      <div class="w3-col m12">
+        <div class="w3-card w3-round w3-white">
+          <div class="w3-container w3-padding">
+
+            <h2 class="w3-opacity">${question["questionToAsk"]}</h2>
+            <h6 class="w3-opacity">What was your accomplishment today?</h6>
+
+            <img src=${question["imageSource"]} alt="Volleyball Play" style="width:80%;">
+
+            <p>Select the answer:</p>
+            <span>
+                <form>
+                    ${create_checkbox_questions(question["answers"])}
+                </form>
+            </span>
+            <br>
+            <button type="button" class="w3-button w3-theme" onclick="nextQuestion()"><i class="fa fa-arrow-right"></i>  Next</button>  
+          </div>
+        </div>
+      </div>
+          </div>
+          <br>
+      </div>`
+    reference.insertAdjacentHTML(position, text);
+}
+
+function create_checkbox_questions(answers){
+    var text = ``;
+    for (var i = 0; i < answers.length; i++) {
+        text += `<input type="checkbox" name="Answer${i}"> ${answers[i]}<br>\n`;
+    }
+    return text;
+}
+
+function insert_question_at_bottom(question) {
+    questions = document.getElementsByClassName('quiz-question');
+    last_question = questions.item(questions.length - 1);
+    add_question(last_question, "afterend", question);
+}

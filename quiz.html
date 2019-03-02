@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="./scripts/main.js"></script>
   <script src="./scripts/data.js"></script>
+  <script src="./scripts/elementadder.js"></script>
   <style>
   html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   </style>
@@ -140,7 +141,7 @@
 
 	    <!-- Middle Column -->
 	    <div class="w3-col m8" id="middle_column">
-    		<div class="quiz-start">
+    		<div class="quiz-start" id="quiz-start">
 		      <div class="w3-row-padding">
 		        <div class="w3-col m12">
 		          <div class="w3-card w3-round w3-white">
@@ -156,8 +157,8 @@
 
 		      <br>
 		  </div>
-
-	      <div class="w3-row-padding quiz" id="start1">
+			<div class="quiz-question">
+	      <div class="w3-row-padding quiz">
 	        <div class="w3-col m12">
 	          <div class="w3-card w3-round w3-white">
 	            <div class="w3-container w3-padding">
@@ -182,7 +183,9 @@
 	            </div>
 	          </div>
 	        </div>
-	      </div>
+				</div>
+				<br>
+			</div>
 
 
 
