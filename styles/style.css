@@ -1,6 +1,7 @@
 p {
-    color: black;
+    color: red;
     font-size: 24px;
+    background-color: powderblue;
 }
 
 li {
