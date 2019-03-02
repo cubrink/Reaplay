@@ -1,7 +1,14 @@
+html {
+	font-family: "Noto Sans";
+}
+
 p {
     color: black;
     font-size: 24px;
     background-color: powderblue;
+    background-clip: padding-box;
+    padding: 32px 70px;
+    /*background-image: url("../images/sports_pic.jpg");*/
 }
 
 h1 {
@@ -12,3 +19,21 @@ li {
     color: black;
     font-size: 20px;
 }
+
+body {
+	padding-top: 30px;
+	text-align: left;
+	margin: 30px;
+	background-color: white;
+	min-width: 400px;
+	min-height: 200px;
+	border-radius: 5px;
+
+
+	/*background-image: url("../images/sports_pic.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-attachment: fixed;
+	background-size: auto;*/
+}
+
