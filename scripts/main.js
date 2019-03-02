@@ -25,7 +25,6 @@ function submitAnswers() {
   /*document.getElementById("start1").innerHTML = output*/
 }
 
-
 var question0 = {
   "questionToAsk": "Is this the correct play for default attacking",
   "imageSource": "./images/std_attack_plays.jpg",
