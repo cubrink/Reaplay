@@ -73,6 +73,51 @@ function add_accordion(reference, position) {
     reference.insertAdjacentHTML(position, text);
 }
 
+function add_player_positions(reference, position, player_data) {
+    var text = `<div class="positions">
+    <div class="w3-card w3-round w3-white w3-hide-small">
+    <div class="w3-container">    
+      <p>Positions</p>
+      <p>`;
+    for (var i = 0; i < player_data['positions'].length; i++) {
+        text += create_player_position_line(player_data['positions'][i], player_data['weights'][i]);
+    }
+    text += `</p>
+    </div>
+  </div>
+  <br>
+  </div>`
+  reference.insertAdjacentHTML(position, text);
+
+}
+
+function create_player_position_line(player_position, weight) {
+   return `<span class="w3-tag w3-small w3-theme${weight_tag_mapper(weight)}">${player_position}</span>\n`
+}
+
+function weight_tag_mapper(weight) {
+    var map = {
+        0: "-l5",
+        1: "-l4",
+        2: "-l3",
+        3: "-l2",
+        4: "-l1",
+        5: "",
+        6: "-d1",
+        7: "-d2",
+        8: "-d3",
+        9: "-d4",
+        10: "-d5"
+    };
+    var color = map[weight];
+    if (color != undefined) {
+        return color;
+    }
+    else {
+        return "";
+    }
+}
+
 function add_question(reference, position, question) {
     var text = `<div class="quiz-question">
     <div class="w3-row-padding quiz">

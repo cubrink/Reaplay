@@ -23,4 +23,11 @@ var questions = {
   "question1": question0,
   "quesiton2": question1,
   "question3": question2
-}
+};
+
+
+var player_data = {
+  "name":       "John Doe",
+  "positions":  ["Setter", "Outside Hitter"],
+  "weights":    [10, 5]
+};
