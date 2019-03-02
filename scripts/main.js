@@ -28,7 +28,7 @@ function submitAnswers() {
 var question0 = {
   "questionToAsk": "Is this the correct play for default attacking",
   "imageSource": "./images/std_attack_plays.jpg",
-  "answers": [ "True", "False" ],
+  "answers": [ "True", "False", "Maybe" ],
   "correctAnswer": 0
 };
 
