@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>hello</h1>
+
+  Firstname: <input type="text" name="FirstName" id="FirstName"><br>
+  Lastname: <input type="text" name="LastName" id="LastName"><br>
+  Roster: <input type="text" name="Roster" id="Roster"><br>
+  teamName: <input type="text" name="teamName" id="teamName"><br>
+
+  <button onclick="document.getElementById('demo').innerHTML = makeCoach(document.getElementById('FirstName').value,document.getElementById('LastName').value, document.getElementById('Roster').value,document.getElementById('teamName').value)">Add</button>
+
+
+  <button type="button"
+  onclick="document.getElementById('demo2').innerHTML = makeTeam()">
+  Click me.</button>
+
+  <script src="test.js"></script>
+
+  <p id="demo"></p>
+  <p id="demo1"></p>
+
+</body>
+</html>
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+<script src= test.js></script>
+<link rel="stylesheet" href="test.css">
+<section class="body_right_comment_input">
+    <p>Name:</p>
+    <input type="text" id="name_input" />
+    </br>
+    <p>Comment:</p>
+    <textarea id="comment_input"></textarea>
+    <button onclick="myFunction()">Click me</button>
+    <span id="comment_result"></span>
+</section>
+Firstname: <input type="text" name="FirstName" id="FirstName"><br>
+Lastname: <input type="text" name="LastName" id="LastName"><br>
+<button onclick="addNames(document.getElementById('FirstName').value,document.getElementById('LastName').value)">Add</button>
+<script src="test.jss"></script>
+-->
