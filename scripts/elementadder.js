@@ -230,3 +230,23 @@ function insert_question_at_bottom(question, id) {
     }
     add_question(ref, "afterend", question, id);
 }
+
+
+function add_grade_box(reference, position, grade) {
+    var text = `<div class='grade-results'>
+    <div class="w3-row-padding">
+        <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding">
+                    <h3>Your Score:</h3>
+                    <div class="w3-center">
+                        <h4>${grade.toFixed(3) * 100} %</h4>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>`
+    reference.insertAdjacentHTML(position, text);
+}

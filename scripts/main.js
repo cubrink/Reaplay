@@ -36,7 +36,14 @@ function nextQuestion(id) {
 
 function showGrade() {
   var grade = gradeQuiz();
-  // TODO add jeffs thing after pull
+  var questions = document.getElementsByClassName('quiz-question')
+  var ref = questions.item(questions.length - 1);
+
+  add_grade_box(ref, "afterend", grade);
+
+  for (var i = 0; i < questions.length; i++) {
+    var question = questions.item(i).setAttribute("style", "display:None");
+  }
 }
 
 function startQuiz() {
@@ -55,16 +62,19 @@ function gradeQuiz() {
     var responses = questions.item(i).getElementsByTagName('input');
     
     var correct = true;
-
+    var all_unchecked = true;
     for (var j = 0; j < responses.length; j++) {
       response = responses.item(j).checked;
+      if (response) {
+        all_unchecked = false;
+      }
       if (question['correctAnswer'] != j && response) {
         correct = false;
         break;
       }
     }
 
-    if (correct) {
+    if (correct && !all_unchecked) {
       correct_questions += 1;
     }
   }
