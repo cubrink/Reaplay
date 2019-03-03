@@ -240,7 +240,7 @@ function add_grade_box(reference, position, grade) {
                 <div class="w3-container w3-padding">
                     <h3>Your Score:</h3>
                     <div class="w3-center">
-                        <h4>${grade.toFixed(3) * 100} %</h4>
+                        <h4>${(grade * 100).toFixed(1)} %</h4>
                     </div>
                 </div>
             </div>
