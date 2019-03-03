@@ -33,7 +33,7 @@
 <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
   <br><br>
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>       
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
 </div>
 
 <!--
@@ -45,20 +45,21 @@
     </div>
   </div>
           -->
-
+<script src="./scripts/data.js"></script>
 <div class="w3-display-middle" style="width:60%";
   <div class="w3-row">
-    <div class="w3-col m7" id="middle_column">  
+    <div class="w3-col m7" id="middle_column">
       <div class="w3-row-padding post-status">
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-display-middle w3-content w3-padding" style="width:60%">
               <h6><b>Username</b></h6>
-              <p contenteditable="true" class="w3-border w3-padding"></p>
+              <input type="text" contenteditable="true" class="w3-border w3-padding" id="username"></input>
               <h6><b>Password</b></h6>
-              <p contenteditable="true" class="w3-border w3-padding"></p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-sign-in"></i>  Sign-in</button> 
-              <p id="error-message" class="error-message" hidden>Error: Invalid username and/or password</p>
+              <input type="password" contenteditable="true" class="w3-border w3-padding" id="password"></input>
+              <br><br>
+              <button type="button"  onclick="logIn()" class="w3-button w3-theme"><i class="fa fa-sign-in"></i>  Sign-in</button>
+              <p id="error-message" class="error-message" style="display:None">Error: Invalid username and/or password</p>
 
             </div>
           </div>
@@ -67,3 +68,13 @@
     </div>
   </div>
 </div>
+<br><br>
+
+<footer class="w3-container w3-theme-d5" style="position:fixed;bottom:0;width:100%;height:24pt;font-size:10pt;line-height:3pt">
+    <div class="w3-col m3">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+    <div class="w3-col m9" style="text-align:right">
+      <p>Developed By: Jeffrey Phillips, Curtis Brinker, Andrew Bass</p>
+    </div>
+  </footer>
