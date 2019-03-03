@@ -4,9 +4,9 @@ function myFunction(id) {
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
+  } else {
     x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
+    x.previousElementSibling.className =
     x.previousElementSibling.className.replace(" w3-theme-d1", "");
   }
 }
@@ -16,7 +16,7 @@ function openNav() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
-  } else { 
+  } else {
     x.className = x.className.replace(" w3-show", "");
   }
 }
@@ -28,9 +28,9 @@ function nextQuestion(id) {
     for (var i = 0; i < previousAnswers.length; i++) {
       previousAnswers.item(i).getElementsByTagName('button').item(0).setAttribute('style', 'display: None');
     }
-    
+
     insert_question_at_bottom(quiz[id], id);
-    
+
   }
 }
 
@@ -60,7 +60,7 @@ function gradeQuiz() {
   for (var i = 0; i < questions.length; i++) {
     var question = quiz[i];
     var responses = questions.item(i).getElementsByTagName('input');
-    
+
     var correct = true;
     var all_unchecked = true;
     for (var j = 0; j < responses.length; j++) {
@@ -106,7 +106,9 @@ function indexMain() {
   //localStorage.setItem('isCoach', false);
 
   isCoach = localStorage.getItem('isCoach');
-  user_data = JSON.parse(localStorage.getItem('name'))
+  user_data = JSON.parse(localStorage.getItem('name'));
+
+  console.log(user_data);
 
   left = document.getElementById('left_column');
 

@@ -125,14 +125,14 @@ function logIn() {
   var match = false;
   playerArray.forEach(function(i){
     if (i.username == username && i.password == password){
-      localStorage.setItem("user", JSON.stringify(i));
+      localStorage.setItem("name", JSON.stringify(i));
       localStorage.setItem("isCoach", false);
       match = true;
       window.location.href="./my_index.html";
     }
   });
   if (coach_data.username == username && coach_data.password == password){
-    localStorage.setItem("user", JSON.stringify(coach_data));
+    localStorage.setItem("name", JSON.stringify(coach_data));
     localStorage.setItem("isCoach", true);
     match = true;
     window.location.href="./my_index.html";
