@@ -26,10 +26,12 @@ var quiz = [question0, question1, question2];
 
 var coach_data = {
   "name":       "Joe Smith",
-  "residence":  "St. Louis, MO",
+  "positions": ["Head Coach"],
+  "home":  "St. Louis, MO",
   "birthday":   "3/3/1985",
   "username":   "joe_smith1",
-  "password":   "1234"
+  "password":   "1234",
+  "picture":    "./images/blank_user.png"
 };
 
 var team_data = {
@@ -58,7 +60,8 @@ var player0_data = {
   "username":   "john_doe1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "April 17, 1998"
+  "birthday":   "April 17, 1998",
+  "picture":    "./images/blank_user.png"
 };
 
 var player1_data = {
@@ -68,7 +71,8 @@ var player1_data = {
   "username":   "bobby_miller1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "September 24, 1998"
+  "birthday":   "September 24, 1998",
+  "picture":    "./images/blank_user.png"
 
 };
 
@@ -79,7 +83,8 @@ var player2_data = {
   "username":   "jacob_joseph1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "February 12, 1997"
+  "birthday":   "February 12, 1997",
+  "picture":    "./images/blank_user.png"
 };
 
 var player3_data = {
