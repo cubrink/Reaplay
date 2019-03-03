@@ -120,3 +120,7 @@ function postMessage() {
     insert_message(message, user_data)
   }
 }
+
+function addToList() {
+  
+}
