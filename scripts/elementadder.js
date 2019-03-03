@@ -118,7 +118,7 @@ function weight_tag_mapper(weight) {
     }
 }
 
-function add_question(reference, position, question) {
+function add_question(reference, position, question, id) {
     var text = `<div class="quiz-question">
     <div class="w3-row-padding quiz">
       <div class="w3-col m12">
@@ -126,7 +126,7 @@ function add_question(reference, position, question) {
           <div class="w3-container w3-padding">
 
             <h2 class="w3-opacity">${question["questionToAsk"]}</h2>
-            <h6 class="w3-opacity">What was your accomplishment today?</h6>
+            <h6 class="w3-opacity"> Question ${id + 1}:</h6>
 
             <img src=${question["imageSource"]} alt="Volleyball Play" style="width:80%;">
 
@@ -137,7 +137,16 @@ function add_question(reference, position, question) {
                 </form>
             </span>
             <br>
-            <button type="button" class="w3-button w3-theme" onclick="nextQuestion()"><i class="fa fa-arrow-right"></i>  Next</button>  
+            `
+            if (id != quiz.length - 1) {
+                var new_id = id + 1;
+                console.log(`new_id: ${new_id}`)
+                text += `<button type="button" class="w3-button w3-theme" onclick="nextQuestion(${new_id})"><i class="fa fa-arrow-right"></i>  Next</button>`
+            }
+            else {
+                text += `<button type="button" class="w3-button w3-theme" onclick="showGrade(${new_id})"><i class="fa fa-arrow-right"></i>  Submit answers</button>`
+            }
+            text += `
           </div>
         </div>
       </div>
@@ -155,8 +164,14 @@ function create_checkbox_questions(answers){
     return text;
 }
 
-function insert_question_at_bottom(question) {
+function insert_question_at_bottom(question, id) {
     questions = document.getElementsByClassName('quiz-question');
-    last_question = questions.item(questions.length - 1);
-    add_question(last_question, "afterend", question);
+    var ref;
+    if (questions.length == 0) {
+        ref = document.getElementById('quiz-start');
+    }
+    else {
+        ref = questions.item(questions.length - 1);
+    }
+    add_question(ref, "afterend", question, id);
 }

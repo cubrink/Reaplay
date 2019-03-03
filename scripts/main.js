@@ -21,8 +21,52 @@ function openNav() {
   }
 }
 
-function submitAnswers() {
+function nextQuestion(id) {
   /*document.getElementById("start1").innerHTML = output*/
+  if (id <= quiz.length - 1) {
+    var previousAnswers = document.getElementsByClassName('quiz-question');
+    for (var i = 0; i < previousAnswers.length; i++) {
+      previousAnswers.item(i).getElementsByTagName('button').item(0).setAttribute('style', 'display: None');
+    }
+    
+    insert_question_at_bottom(quiz[id], id);
+    
+  }
 }
 
+function showGrade() {
+  var grade = gradeQuiz();
+  // TODO add jeffs thing after pull
+}
 
+function startQuiz() {
+  var ref = document.getElementById('quiz-start');
+  ref.setAttribute('hidden', 'true');
+  insert_question_at_bottom(quiz[0], 0);
+}
+
+function gradeQuiz() {
+  var questions = document.getElementsByClassName('quiz-question');
+  var total_questions = questions.length;
+  var correct_questions = 0;
+
+  for (var i = 0; i < questions.length; i++) {
+    var question = quiz[i];
+    var responses = questions.item(i).getElementsByTagName('input');
+    
+    var correct = true;
+
+    for (var j = 0; j < responses.length; j++) {
+      response = responses.item(j).checked;
+      if (question['correctAnswer'] != j && response) {
+        correct = false;
+        break;
+      }
+    }
+
+    if (correct) {
+      correct_questions += 1;
+    }
+  }
+  return (correct_questions / total_questions);
+}
