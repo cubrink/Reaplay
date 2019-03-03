@@ -82,5 +82,5 @@ function logIn(username, password) {
   if (coach_data.username == username && coach_data.password == password){
     localStorage.setItem("user", "coach_data");
   }
-
+  document.getElementById('error-message').removeAttribute('hidden');
 }
