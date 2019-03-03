@@ -23,14 +23,14 @@ function add_coach_accordion(reference, position) {
               <div id="Demo1" class="w3-hide w3-container">
                 <!--<p>MST Club Volleyball</p>-->
                 <br>
-                <button type="button" class="w3-button w3-theme"><i class="fa fa-users"></i>  MST Club Volleyball</button> 
+                <button onclick="window.location.href='./team.html'" type="button" class="w3-button w3-theme"><i class="fa fa-users"></i>  MST Club Volleyball</button>
                 <br><br>
               </div>
 
               <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Team Games</button>
               <div id="Demo2" class="w3-hide w3-container">
                 <br>
-                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Crossover Event</button> 
+                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Crossover Event</button>
                 <br><br>
                 <!--<p>Crossover Event</p>-->
               </div>
@@ -39,7 +39,7 @@ function add_coach_accordion(reference, position) {
               <div id="Demo3" class="w3-hide w3-container">
                 <div class="w3-row-padding">
                 <br>
-                <button type="button" class="w3-button w3-theme"><i class="fa fa-book"></i>  Playbook</button>
+                <button onclick="window.location.href='./study.html'" type="button" class="w3-button w3-theme"><i class="fa fa-book"></i>  Playbook</button>
                 <br><br>
                   <div class="w3-half">
                     <img src="./images/std_attack_play.jpg" alt="Volleyball Play" style="width:100%;">
@@ -61,7 +61,7 @@ function add_coach_accordion(reference, position) {
                   </div>
                 </div>
               </div>
-            </div>      
+            </div>
           </div>
           <br>
         </div>
@@ -77,8 +77,8 @@ function add_message(reference, position, message, user_data) {
     <h4>${user_data['name']}</h4><br>
     <hr class="w3-clear">
     <p>${message}</p>
-    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
   </div>
   </div>
     `
@@ -104,7 +104,7 @@ function add_accordion(reference, position) {
             <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Games</button>
             <div id="Demo2" class="w3-hide w3-container">
               <br>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Crossover Event</button> 
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Crossover Event</button>
               <br><br>
             </div>
 
@@ -146,7 +146,7 @@ function add_accordion(reference, position) {
             </div>
           </div>
             </div>
-          </div>      
+          </div>
         </div>
         <br>
         `;
@@ -157,7 +157,7 @@ function add_player_positions(reference, position, player_data) {
     console.log("in add_player_position")
     var text = `<div class="positions">
     <div class="w3-card w3-round w3-white w3-hide-small">
-    <div class="w3-container">    
+    <div class="w3-container">
       <p>Positions</p>
       <p>`;
     for (var i = 0; i < player_data['positions'].length; i++) {
