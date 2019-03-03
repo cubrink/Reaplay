@@ -91,7 +91,7 @@ function buildIndex() {
 function buildLeft(user_data) {
 
   add_profile_desc(left, "beforeend", user_data);
-  if (isCoach == true) {
+  if (isCoach === "true") {
     add_coach_accordion(left, "beforeend");
   }
   else {
@@ -107,8 +107,6 @@ function indexMain() {
 
   isCoach = localStorage.getItem('isCoach');
   user_data = JSON.parse(localStorage.getItem('name'));
-
-  console.log(user_data);
 
   left = document.getElementById('left_column');
 
