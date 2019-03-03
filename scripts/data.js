@@ -34,10 +34,12 @@ var quiz = [question0, question1, question2, question3];
 
 var coach_data = {
   "name":       "Joe Smith",
-  "residence":  "St. Louis, MO",
+  "positions": ["Head Coach"],
+  "home":  "St. Louis, MO",
   "birthday":   "3/3/1985",
   "username":   "joe_smith1",
-  "password":   "1234"
+  "password":   "1234",
+  "picture":    "./images/blank_user.png"
 };
 
 var team_data = {
@@ -50,10 +52,13 @@ var team_data = {
 
   "roster":   [player0_data,
                player1_data,
-               player2_data]
+               player2_data,
+               player3_data,
+               player4_data,
+               player5_data]
 }
 
-var playerArray = [player0_data, player1_data, player2_data];
+var playerArray = [player0_data, player1_data, player2_data, player3_data, player4_data, player5_data];
 
 
 var player0_data = {
@@ -63,7 +68,8 @@ var player0_data = {
   "username":   "john_doe1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "April 17, 1998"
+  "birthday":   "April 17, 1998",
+  "picture":    "./images/blank_user.png"
 };
 
 var player1_data = {
@@ -73,7 +79,8 @@ var player1_data = {
   "username":   "bobby_miller1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "September 24, 1998"
+  "birthday":   "September 24, 1998",
+  "picture":    "./images/blank_user.png"
 
 };
 
@@ -84,8 +91,39 @@ var player2_data = {
   "username":   "jacob_joseph1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "February 12, 1997"
+  "birthday":   "February 12, 1997",
+  "picture":    "./images/blank_user.png"
 };
+
+var player3_data = {
+  "name":       "Peter Parker",
+  "positions":  ["Outside Hitter", "Setter"],
+  "weights":    [10, 4],
+  "username":   "peter_parker1",
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "April 29, 1998"
+};
+
+var player4_data = {
+  "name":       "Jordan Micheals",
+  "positions":  ["Rightside Hitter", "Outside Hitter"],
+  "weights":    [10, 8],
+  "username":   "jordan_micheals1",
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "December 30, 1999"
+}
+
+var player5_data = {
+  "name":       "Eddy Jones",
+  "positions":  ["DS", "Libero"],
+  "weights":    [10, 6],
+  "username":   "eddy_jones1",
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "June 23, 1997"
+}
 
 function logIn() {
 
