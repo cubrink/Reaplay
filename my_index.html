@@ -15,7 +15,7 @@
   html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   </style>
 </head>
-<body class="w3-theme-l5">
+<body class="w3-theme-l5" onload='indexMain()'>
 
   <!-- Navagation Bar -->
   <div class="w3-top">
@@ -52,9 +52,10 @@
   <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
     <!-- The Grid -->
     <div class="w3-row">
+      
       <!-- Left Column -->
       <div class="w3-col m3" id="left_column">
-        <!-- Profile -->
+        <!-- Profile 
         <div class="w3-card w3-round w3-white profile-desc">
           <div class="w3-container">
           <h4 class="w3-center">My Profile</h4>
@@ -66,14 +67,14 @@
           </div>
         </div>
         <br>
+        <!-- End of profile -->
         
-        <!-- Accordion -->
+        <!-- Accordion
         <div class="w3-card w3-round accordion" id="demo-list">
           <div class="w3-white">
             <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Team</button>
 
             <div id="Demo1" class="w3-hide w3-container">
-              <!--<p>MST Club Volleyball</p>-->
               <br>
               <button type="button" class="w3-button w3-theme"><i class="fa fa-users"></i>  MST Club Volleyball</button> 
               <br><br>
@@ -84,7 +85,6 @@
               <br>
               <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Crossover Event</button> 
               <br><br> 
-              <!--<p>Crossover Event</p>-->
             </div>
 
             <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-video-camera fa-fw w3-margin-right"></i> My Videos</button>
@@ -128,8 +128,9 @@
           </div>      
         </div>
         <br>
+        <!-- End of accordion-->
         
-        <!-- Positions --> 
+        <!-- Positions
         <div class='positions'>
           <div class="w3-card w3-round w3-white w3-hide-small">
             <div class="w3-container">    
@@ -141,18 +142,12 @@
                 <span class="w3-tag w3-small w3-theme-d2" id="position">Rightside Hitter</span>
                 <span class="w3-tag w3-small w3-theme-d1" id="position">DS</span>
                 <span class="w3-tag w3-small w3-theme" id="position">Libero</span>
-                <!--
-                <span class="w3-tag w3-small w3-theme-l1">Friends</span>
-                <span class="w3-tag w3-small w3-theme-l2">Food</span>
-                <span class="w3-tag w3-small w3-theme-l3">Design</span>
-                <span class="w3-tag w3-small w3-theme-l4">Art</span>
-                <span class="w3-tag w3-small w3-theme-l5">Photos</span>
-                  -->
               </p>
             </div>
           </div>
           <br>
         </div>
+        <!-- End of positions-->
 
         <!-- Alert Box -->
         <!--
@@ -170,17 +165,19 @@
       
       <!-- Middle Column -->
       <div class="w3-col m7" id="middle_column">
-      
-        <div class="w3-row-padding post-status">
-          <div class="w3-col m12">
-            <div class="w3-card w3-round w3-white">
-              <div class="w3-container w3-padding">
-                <h6 class="w3-opacity">What was your accomplishment today?</h6>
-                <p contenteditable="true" class="w3-border w3-padding">Type something here...</p>
-                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+        <div class='post-message' id='post-message'>
+          <div class="w3-row-padding post-status">
+            <div class="w3-col m12">
+              <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding">
+                  <h6 class="w3-opacity">What was your accomplishment today?</h6>
+                  <p contenteditable="true" class="w3-border w3-padding" id="message">Type something here...</p>
+                  <button type="button" onclick="postMessage()" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+                </div>
               </div>
             </div>
           </div>
+          <br>
         </div>
         
         <div class="w3-container w3-card w3-white w3-round w3-margin post"><br>

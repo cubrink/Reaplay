@@ -80,3 +80,43 @@ function gradeQuiz() {
   }
   return (correct_questions / total_questions);
 }
+
+function buildIndex() {
+  //var isCoach = localStorage.getItem('isCoach');
+  var user_data = JSON.parse(localStorage.getItem('user'));
+
+  buildLeft(user_data)
+}
+
+function buildLeft(user_data) {
+
+  add_profile_desc(left, "beforeend", user_data);
+  if (isCoach == true) {
+    add_coach_accordion(left, "beforeend");
+  }
+  else {
+    add_accordion(left, "beforeend");
+    add_player_positions(left, "beforeend", user_data);
+  }
+}
+
+
+function indexMain() {
+  localStorage.setItem('name', JSON.stringify(player1_data));
+  localStorage.setItem('isCoach', false);
+
+  isCoach = localStorage.getItem('isCoach');
+  user_data = JSON.parse(localStorage.getItem('name'))
+
+  left = document.getElementById('left_column');
+
+  buildIndex()
+}
+
+function postMessage() {
+  user_data = JSON.parse(localStorage.getItem('name'));
+  var message = document.getElementById('message').innerText;
+  if (message.length > 0) {
+    insert_message(message, user_data)
+  }
+}

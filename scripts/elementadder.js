@@ -2,7 +2,7 @@ function add_profile_desc(reference, position, player_data) {
     var text = `<div class="w3-card w3-round w3-white profile-desc">
     <div class="w3-container">
     <h4 class="w3-center">My Profile</h4>
-    <p class="w3-center"><img src="./images/blank_user.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+    <p class="w3-center"><img src="${player_data['picture']}" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
     <hr>
     <p><i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>${player_data['name']}</p>
     <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>${player_data['home']}</p>
@@ -14,8 +14,8 @@ function add_profile_desc(reference, position, player_data) {
     reference.insertAdjacentHTML(position, text);
 }
 
-function add_coach_accordian(reference, position) {
-  var text =`<div class="coach-accordian">
+function add_coach_accordion(reference, position) {
+  var text =`<div class="coach-accordion">
           <div class="w3-card w3-round" id="demo-list">
             <div class="w3-white">
               <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Team</button>
@@ -67,6 +67,28 @@ function add_coach_accordian(reference, position) {
         </div>
         `;
     reference.insertAdjacentHTML(position, text);
+}
+
+function add_message(reference, position, message, user_data) {
+    var text =`<div class='user-message'>
+    <div class="w3-container w3-card w3-white w3-round w3-margin post"><br>
+    <img src=${user_data['picture']} alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+    <span class="w3-right w3-opacity">1 min</span>
+    <h4>${user_data['name']}</h4><br>
+    <hr class="w3-clear">
+    <p>${message}</p>
+    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+  </div>
+  <br>
+  </div>
+    `
+    reference.insertAdjacentHTML(position, text);
+}
+
+function insert_message(message, user_data) {
+    ref = document.getElementById('post-message');
+    add_message(ref, "afterend", message, user_data);
 }
 
 function add_accordion(reference, position) {
@@ -129,6 +151,7 @@ function add_accordion(reference, position) {
 }
 
 function add_player_positions(reference, position, player_data) {
+    console.log("in add_player_position")
     var text = `<div class="positions">
     <div class="w3-card w3-round w3-white w3-hide-small">
     <div class="w3-container">    
