@@ -23,7 +23,7 @@ function add_coach_accordion(reference, position) {
               <div id="Demo1" class="w3-hide w3-container">
                 <!--<p>MST Club Volleyball</p>-->
                 <br>
-                <button type="button" class="w3-button w3-theme"><i class="fa fa-users"></i>  MST Club Volleyball</button> 
+                <button onclick="window.location.href='./team.html'" type="button" class="w3-button w3-theme"><i class="fa fa-users"></i>  MST Club Volleyball</button> 
                 <br><br>
               </div>
 
@@ -39,7 +39,7 @@ function add_coach_accordion(reference, position) {
               <div id="Demo3" class="w3-hide w3-container">
                 <div class="w3-row-padding">
                 <br>
-                <button type="button" class="w3-button w3-theme"><i class="fa fa-book"></i>  Playbook</button>
+                <button onclick="window.location.href='./study.html'" type="button" class="w3-button w3-theme"><i class="fa fa-book"></i>  Playbook</button>
                 <br><br>
                   <div class="w3-half">
                     <img src="./images/std_attack_play.jpg" alt="Volleyball Play" style="width:100%;">
