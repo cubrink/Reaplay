@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/style2.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/data.js"></script>
+  <script src="./scripts/elementadder.js"></script>
+  <style>
+  html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+  </style>
+</head>
+<body class="w3-theme-l5">
+
+<!-- Navagation Bar -->
+<div class="w3-top">
+<div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Reaplay</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    <img src="./images/blank_user.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+  </a>
+</div>
+</div>
+
+<!-- Navbar on small screens -->
+<!-- Implement dropdown for menu bar idealy -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <br><br>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>       
+</div>
+
+<!--
+  <br><br><br><br><br>
+  <div id="signIn" class="w3-bar-block">
+    <div class="w3-container">
+
+      <h1>Hello, world!</h1>
+    </div>
+  </div>
+          -->
+
+<div class="w3-display-middle" style="width:60%";
+  <div class="w3-row">
+    <div class="w3-col m7" id="middle_column">  
+      <div class="w3-row-padding post-status">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-display-middle w3-content w3-padding" style="width:60%">
+              <h6><b>Username</b></h6>
+              <p contenteditable="true" class="w3-border w3-padding"></p>
+              <h6><b>Password</b></h6>
+              <p contenteditable="true" class="w3-border w3-padding"></p>
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-sign-in"></i>  Sign-in</button> 
+              <p id="error-message" class="error-message" hidden>Error: Invalid username and/or password</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
