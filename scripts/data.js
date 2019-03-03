@@ -56,7 +56,7 @@ var team_data = {
                player3_data,
                player4_data,
                player5_data]
-}
+};
 
 var playerArray = [player0_data, player1_data, player2_data, player3_data, player4_data, player5_data];
 
@@ -113,7 +113,7 @@ var player4_data = {
   "password":   "1234",
   "home":       "Rolla, Missouri",
   "birthday":   "December 30, 1999"
-}
+};
 
 var player5_data = {
   "name":       "Eddy Jones",
@@ -123,7 +123,29 @@ var player5_data = {
   "password":   "1234",
   "home":       "Rolla, Missouri",
   "birthday":   "June 23, 1997"
-}
+};
+
+
+var message_0 = {
+  "message": "LETS GET THE DUB THIS WEEKEND!",
+  "user_data": player1_data
+};
+
+var message_1 = {
+  "message": "Anybody need a ride to practice tomorrow night?",
+  "user_data": player2_data
+};
+
+var message_2 = {
+  "message": "I added a new video to the website. Please check it out and finish your quizzes!",
+  "user_data": coach_data
+};
+
+var messages = [message_0, message_1, message_2];
+
+
+
+
 
 function logIn() {
 

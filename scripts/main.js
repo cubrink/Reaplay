@@ -121,6 +121,3 @@ function postMessage() {
   }
 }
 
-function addToList() {
-  
-}
