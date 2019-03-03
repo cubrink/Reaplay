@@ -42,10 +42,13 @@ var team_data = {
 
   "roster":   [player0_data,
                player1_data,
-               player2_data]
+               player2_data,
+               player3_data,
+               player4_data,
+               player5_data]
 }
 
-var playerArray = [player0_data, player1_data, player2_data];
+var playerArray = [player0_data, player1_data, player2_data, player3_data, player4_data, player5_data];
 
 
 var player0_data = {
@@ -78,6 +81,36 @@ var player2_data = {
   "home":       "Rolla, Missouri",
   "birthday":   "February 12, 1997"
 };
+
+var player3_data = {
+  "name":       "Peter Parker",
+  "positions":  ["Outside Hitter", "Setter"],
+  "weights":    [10, 4],
+  "username":   "peter_parker1",
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "April 29, 1998"
+};
+
+var player4_data = {
+  "name":       "Jordan Micheals",
+  "positions":  ["Rightside Hitter", "Outside Hitter"],
+  "weights":    [10, 8],
+  "username":   "jordan_micheals1",
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "December 30, 1999"
+}
+
+var player5_data = {
+  "name":       "Eddy Jones",
+  "positions":  ["DS", "Libero"],
+  "weights":    [10, 6],
+  "username":   "eddy_jones1",
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "June 23, 1997"
+}
 
 function logIn() {
 
