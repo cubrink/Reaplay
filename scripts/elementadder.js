@@ -14,6 +14,61 @@ function add_profile_desc(reference, position, name, job, date) {
     reference.insertAdjacentHTML(position, text);
 }
 
+function add_coach_accordian(reference, position) {
+  var text =`<div class="coach-accordian">
+          <div class="w3-card w3-round" id="demo-list">
+            <div class="w3-white">
+              <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Team</button>
+
+              <div id="Demo1" class="w3-hide w3-container">
+                <!--<p>MST Club Volleyball</p>-->
+                <br>
+                <button type="button" class="w3-button w3-theme"><i class="fa fa-users"></i>  MST Club Volleyball</button> 
+                <br><br>
+              </div>
+
+              <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Team Games</button>
+              <div id="Demo2" class="w3-hide w3-container">
+                <br>
+                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Crossover Event</button> 
+                <br><br>
+                <!--<p>Crossover Event</p>-->
+              </div>
+
+              <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-book fa-fw w3-margin-right"></i> Playbook</button>
+              <div id="Demo3" class="w3-hide w3-container">
+                <div class="w3-row-padding">
+                <br>
+                <button type="button" class="w3-button w3-theme"><i class="fa fa-book"></i>  Playbook</button>
+                <br><br>
+                  <div class="w3-half">
+                    <img src="./images/std_attack_play.jpg" alt="Volleyball Play" style="width:100%;">
+                  </div>
+                  <div class="w3-half">
+                    <img src="./images/std_cross_play.jpg" alt="Volleyball Play" style="width:100%;">
+                    </div>
+                  <div class="w3-half">
+                    <img src="./images/std_slide_play.jpg" alt="Volleyball Play" style="width:100%;">
+                  </div>
+                  <div class="w3-half">
+                    <img src="./images/std_back_row_play.jpg" alt="Volleyball Play" style="width:100%;">
+                  </div>
+                  <div class="w3-half">
+                    <img src="./images/alt_back_row_play.jpg" alt="Volleyball Play" style="width:100%;">
+                  </div>
+                  <div class="w3-half">
+                    <img src="./images/std_set_front_row.jpg" alt="Volleyball Play" style="width:100%;">
+                  </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+          <br>
+        </div>
+        `;
+    reference.insertAdjacentHTML(position, text);
+}
+
 function add_accordion(reference, position) {
     var text =`<div class="w3-card w3-round accordion" id="demo-list">
           <div class="w3-white">
