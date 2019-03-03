@@ -11,7 +11,7 @@ var question1 = {
   "questionToAsk": "Is this the correct play for a backrow attack",
   "imageSource": "./images/std_attack_play.jpg",
   "answers": [ "True", "False" ],
-  "correctAnswer": 0
+  "correctAnswer": 1
 };
 
 var question2 = {
@@ -19,7 +19,7 @@ var question2 = {
   "questionToAsk": "Is this the correct play for trick play #1",
   "imageSource": "./images/std_attack_play.jpg",
   "answers": [ "True", "False" ],
-  "correctAnswer": 0
+  "correctAnswer": 1
 };
 
 var quiz = [question0, question1, question2];
@@ -72,14 +72,28 @@ var player2_data = {
   "password":   "1234"
 }
 
-function logIn(username, password) {
-  playerArray.forEach(function(playerArray){
-    if (playerArray[i].username == username && playerArray[i].password == password){
-      localStorage.setItem("user", "playerArray[i]");
+function logIn() {
+
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  var match = false;
+  playerArray.forEach(function(i){
+    if (i.username == username && i.password == password){
+      localStorage.setItem("user", JSON.stringify(i));
+      localStorage.setItem("isCoach", false);
+      match = true;
+      window.location.href="./my_index.html";
     }
   });
   if (coach_data.username == username && coach_data.password == password){
-    localStorage.setItem("user", "coach_data");
+    localStorage.setItem("user", JSON.stringify(coach_data));
+    localStorage.setItem("isCoach", true);
+    match = true;
+    window.location.href="./my_index.html";
   }
-  document.getElementById('error-message').removeAttribute('hidden');
+  if(!match)
+  {
+    document.getElementById('error-message').removeAttribute('style');
+  }
 }
