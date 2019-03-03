@@ -102,8 +102,8 @@ function buildLeft(user_data) {
 
 
 function indexMain() {
-  localStorage.setItem('name', JSON.stringify(player1_data));
-  localStorage.setItem('isCoach', false);
+  //localStorage.setItem('name', JSON.stringify(player1_data));
+  //localStorage.setItem('isCoach', false);
 
   isCoach = localStorage.getItem('isCoach');
   user_data = JSON.parse(localStorage.getItem('name'))
