@@ -80,7 +80,6 @@ function add_message(reference, position, message, user_data) {
     <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
     <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
   </div>
-  <br>
   </div>
     `
     reference.insertAdjacentHTML(position, text);
