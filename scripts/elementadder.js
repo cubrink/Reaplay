@@ -1,12 +1,12 @@
-function add_profile_desc(reference, position, name, job, date) {
+function add_profile_desc(reference, position, player_data) {
     var text = `<div class="w3-card w3-round w3-white profile-desc">
     <div class="w3-container">
     <h4 class="w3-center">My Profile</h4>
-    <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+    <p class="w3-center"><img src="./images/blank_user.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
     <hr>
-    <p><i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>${name}</p>
-    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>${job}</p>
-    <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>${date}</p>
+    <p><i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>${player_data['name']}</p>
+    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>${player_data['home']}</p>
+    <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>${player_data['birthday']}</p>
     </div>
     </div>
     <br>

@@ -53,7 +53,9 @@ var player0_data = {
   "positions":  ["Setter", "Outside Hitter"],
   "weights":    [10, 5],
   "username":   "john_doe1",
-  "password":   "1234"
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "April 17, 1998"
 };
 
 var player1_data = {
@@ -61,7 +63,10 @@ var player1_data = {
   "positions":  ["Libero", "DS"],
   "weights":    [10, 3],
   "username":   "bobby_miller1",
-  "password":   "1234"
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "September 24, 1998"
+
 };
 
 var player2_data = {
@@ -69,8 +74,10 @@ var player2_data = {
   "positions":  ["Middle", "Rightside Hitter"],
   "weights":    [10, 7],
   "username":   "jacob_joseph1",
-  "password":   "1234"
-}
+  "password":   "1234",
+  "home":       "Rolla, Missouri",
+  "birthday":   "February 12, 1997"
+};
 
 function logIn(username, password) {
   playerArray.forEach(function(playerArray){
