@@ -9,7 +9,7 @@ var question0 = {
 var question1 = {
   "id": 1,
   "questionToAsk": "Is this the correct play for a backrow attack",
-  "imageSource": "./images/std_attack_play.jpg",
+  "imageSource": "./images/std_cross_play.jpg",
   "answers": [ "True", "False" ],
   "correctAnswer": 1
 };
@@ -17,12 +17,20 @@ var question1 = {
 var question2 = {
   "id": 2,
   "questionToAsk": "Is this the correct play for trick play #1",
-  "imageSource": "./images/std_attack_play.jpg",
+  "imageSource": "./images/std_slide_play.jpg",
   "answers": [ "True", "False" ],
   "correctAnswer": 1
 };
 
-var quiz = [question0, question1, question2];
+var question3 = {
+  "id": 3,
+  "questionToAsk": "What Play is this?",
+  "imageSource": "./images/std_set_front_row.jpg",
+  "answers": [ "Back row attack", "Setter front row play", "Cross play" ],
+  "correctAnswer": 1
+};
+
+var quiz = [question0, question1, question2, question3];
 
 var coach_data = {
   "name":       "Joe Smith",
