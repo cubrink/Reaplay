@@ -83,7 +83,7 @@ function gradeQuiz() {
 
 function buildIndex() {
   //var isCoach = localStorage.getItem('isCoach');
-  var user_data = JSON.parse(localStorage.getItem('user'));
+  var user_data = JSON.parse(localStorage.getItem('name'));
 
   buildLeft(user_data);
   buildMiddle(user_data);
@@ -125,7 +125,7 @@ function indexMain() {
 
 function buildIndexAlt() {
   //var isCoach = localStorage.getItem('isCoach');
-  var user_data = JSON.parse(localStorage.getItem('user'));
+  var user_data = JSON.parse(localStorage.getItem('name'));
 
   buildLeftAlt(user_data)
 }
