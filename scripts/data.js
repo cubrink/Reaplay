@@ -26,7 +26,7 @@ var question3 = {
   "id": 3,
   "questionToAsk": "What Play is this?",
   "imageSource": "./images/std_set_front_row.jpg",
-  "answers": [ "Back row attack", "Setter front row play", "Cross play" ],
+  "answers": [ "Standard Back Row", "Standard Front Row Set", "Standard Cross" ],
   "correctAnswer": 1
 };
 
@@ -102,7 +102,8 @@ var player3_data = {
   "username":   "peter_parker1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "April 29, 1998"
+  "birthday":   "April 29, 1998",
+  "picture":    "./images/blank_user.png"
 };
 
 var player4_data = {
@@ -112,7 +113,8 @@ var player4_data = {
   "username":   "jordan_micheals1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "December 30, 1999"
+  "birthday":   "December 30, 1999",
+  "picture":    "./images/blank_user.png"
 };
 
 var player5_data = {
@@ -122,7 +124,8 @@ var player5_data = {
   "username":   "eddy_jones1",
   "password":   "1234",
   "home":       "Rolla, Missouri",
-  "birthday":   "June 23, 1997"
+  "birthday":   "June 23, 1997",
+  "picture":    "./images/blank_user.png"
 };
 
 
